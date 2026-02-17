@@ -10,7 +10,7 @@ This project monitors two Linux servers in a home lab environment:
 ---
 
 ## Architecture
-
+```
 +------------------+ +------------------+
 | merrygo | | nir-server |
 |------------------| |------------------|
@@ -20,7 +20,7 @@ This project monitors two Linux servers in a home lab environment:
 | | | Alertmanager |
 +------------------+ | Loki (logs) |
 +------------------+
-
+```
 
 All services are containerized and orchestrated with Docker Compose.
 
@@ -53,6 +53,7 @@ All services are containerized and orchestrated with Docker Compose.
 
 ## Repository Structure
 
+```
 homelab-monitoring/
 ├── docker-compose.yml
 ├── prometheus/
@@ -67,7 +68,7 @@ homelab-monitoring/
 │ └── alertmanager.yml
 ├── docs/
 └── README.md
-
+```
 
 ---
 
