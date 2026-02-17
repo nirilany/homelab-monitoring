@@ -1,0 +1,24 @@
+global:
+  scrape_interval: 15s
+
+rule_files:
+  - /etc/prometheus/rules/*.yml
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ["alertmanager:9093"]
+
+scrape_configs:
+  - job_name: "node_nir_server"
+    static_configs:
+      - targets: ["node_exporter:9100"]
+
+  - job_name: "node_merrygo"
+    static_configs:
+      - targets: ["merrygo:9100"]
+
+  - job_name: "cadvisor_merrygo"
+    static_configs:
+      - targets: ["merrygo:8080"]
+
